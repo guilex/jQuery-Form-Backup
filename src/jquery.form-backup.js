@@ -71,7 +71,6 @@
 		fullKey = namespace + '.' + backupId + '.' + key;
 
 		window.localStorage.setItem(fullKey, value);
-		console.log('backupped: ' + key);
 	}
 
 	function restoreBackup(id)
