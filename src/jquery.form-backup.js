@@ -46,7 +46,7 @@
 
 			var clearButton = $('<button>', {text: 'remove all backups'}).on('click', function()
 			{
-				clearAll();
+				clearAll(notificationWrapper);
 			});
 
 			notificationText.appendTo(notificationWrapper);
@@ -92,12 +92,14 @@
 		}
 	}
 
-	function clearAll()
+	function clearAll(notificationWrapper)
 	{
 		window.formBackupData = {};
 		
 		// using this is temp.
 		window.localStorage.clear();
+
+		notificationWrapper.fadeOut();
 
 		// this is not working for some reason?
 		for (var i = 0; i < window.localStorage.length; i++){
