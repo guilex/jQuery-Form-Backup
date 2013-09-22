@@ -30,9 +30,10 @@
 
 			$.each(backups, function(key, item)
 			{
+				var time = moment.unix(key/1000).fromNow();
 				var option = $('<option>', {
 					value: key,
-					text: moment.unix(parseInt(key/1000)).fromNow()
+					text: time
 				});
 				option.appendTo(select);
 			});
