@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>jQuery Form Backup Demo</title>
+	<style>
+		label {display: block}
+		textarea {width: 400px; height: 120px;}
+		.backupNotification {background: #ffffcc; padding: 2px; border: 1px solid orange}
+	</style>
+</head>
+<body>
+
+<h1>Form Example</h1>
+
+<ul>
+	<li>
+		<label for="title">Title</label>
+		<input type="text" name="title" id="title" data-backup-field>
+	</li>
+	<li>
+		<label for="excerpt">Excerpt</label>
+		<input type="text" name="excerpt" id="excerpt" data-backup-field>
+	</li>
+	<li>
+		<label for="title">Content</label>
+		<textarea name="content" id="content" data-backup-field></textarea>
+	</li>
+	<li>
+		<label for="excerpt">Category</label>
+		<input type="text" name="category" id="category" data-backup-field>
+	</li>
+	<li>
+		<input type="submit" name="submit" value="submit">
+	</li>
+</ul>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="https://rawgithub.com/moment/moment/2.2.1/min/moment.min.js"></script>
+<script src="src/jquery.form-backup.js"></script>
+</body>
+</html>
